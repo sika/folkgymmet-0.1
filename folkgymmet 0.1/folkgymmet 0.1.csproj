@@ -68,6 +68,7 @@
   <ItemGroup>
     <Content Include="app\app.js" />
     <Content Include="app\components\partials\home\home.module.js" />
+    <Content Include="app\shared\script.js" />
     <Content Include="app\shared\stylesheet.css" />
     <Content Include="externals\angularjs\angular.js" />
     <Content Include="externals\bootstrap\css\bootstrap-responsive.css" />
