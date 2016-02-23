@@ -1,0 +1,20 @@
+d:\mina dokument\visual studio 2015\Projects\folkgymmet 0.1\folkgymmet 0.1\bin\roslyn\csc.exe
+d:\mina dokument\visual studio 2015\Projects\folkgymmet 0.1\folkgymmet 0.1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+d:\mina dokument\visual studio 2015\Projects\folkgymmet 0.1\folkgymmet 0.1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+d:\mina dokument\visual studio 2015\Projects\folkgymmet 0.1\folkgymmet 0.1\bin\roslyn\Microsoft.CodeAnalysis.dll
+d:\mina dokument\visual studio 2015\Projects\folkgymmet 0.1\folkgymmet 0.1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+d:\mina dokument\visual studio 2015\Projects\folkgymmet 0.1\folkgymmet 0.1\bin\roslyn\Microsoft.CSharp.Core.targets
+d:\mina dokument\visual studio 2015\Projects\folkgymmet 0.1\folkgymmet 0.1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+d:\mina dokument\visual studio 2015\Projects\folkgymmet 0.1\folkgymmet 0.1\bin\roslyn\System.Collections.Immutable.dll
+d:\mina dokument\visual studio 2015\Projects\folkgymmet 0.1\folkgymmet 0.1\bin\roslyn\System.Reflection.Metadata.dll
+d:\mina dokument\visual studio 2015\Projects\folkgymmet 0.1\folkgymmet 0.1\bin\roslyn\vbc.exe
+d:\mina dokument\visual studio 2015\Projects\folkgymmet 0.1\folkgymmet 0.1\bin\roslyn\VBCSCompiler.exe
+d:\mina dokument\visual studio 2015\Projects\folkgymmet 0.1\folkgymmet 0.1\bin\roslyn\VBCSCompiler.exe.config
+d:\mina dokument\visual studio 2015\Projects\folkgymmet 0.1\folkgymmet 0.1\bin\folkgymmet 0.1.dll.config
+d:\mina dokument\visual studio 2015\Projects\folkgymmet 0.1\folkgymmet 0.1\bin\folkgymmet 0.1.dll
+d:\mina dokument\visual studio 2015\Projects\folkgymmet 0.1\folkgymmet 0.1\bin\folkgymmet 0.1.pdb
+d:\mina dokument\visual studio 2015\Projects\folkgymmet 0.1\folkgymmet 0.1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+d:\mina dokument\visual studio 2015\Projects\folkgymmet 0.1\folkgymmet 0.1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+d:\mina dokument\visual studio 2015\Projects\folkgymmet 0.1\folkgymmet 0.1\obj\Debug\folkgymmet 0.1.csprojResolveAssemblyReference.cache
+d:\mina dokument\visual studio 2015\Projects\folkgymmet 0.1\folkgymmet 0.1\obj\Debug\folkgymmet 0.1.dll
+d:\mina dokument\visual studio 2015\Projects\folkgymmet 0.1\folkgymmet 0.1\obj\Debug\folkgymmet 0.1.pdb
