@@ -1,20 +1,18 @@
-var myApp = angular.module('app', ['ui.router','home.module']);
+var myApp = angular.module('app', ['ui.router','eventJoin.module', 'eventCreate.module', 'headerMenu.module']);
 	myApp.controller('appController', function() {
-		
 		var appCont = this;
 		appCont.shit = "hhh";
-		/* $scope.shit = "hhh";
-		console.log($scope.shit);
-		console.log("app.js");
-		 *///$scope.double = function(value) { return value * 2; };
 	});
 	
 	myApp.config(function($stateProvider, $urlRouterProvider){
 		$urlRouterProvider.otherwise('/');
 		
-		$stateProvider.state('/home', {
-			url: '/home',
-			//controller: 'appController',
-			templateUrl: 'app/components/partials/home/home.html'
+		$stateProvider.state('eventJoin', {
+			url: '/',
+			controller: 'eventJoinController',
+			templateUrl: 'app/components/partials/eventJoin/eventJoin.html'
+		}).state('eventCreate', {
+		    url: '/eventCreate',
+		    templateUrl: 'app/components/partials/eventCreate/eventCreate.html'
 		})
 	});

@@ -67,9 +67,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\app.js" />
+    <Content Include="app\components\directives\header-menu\header-menu.css" />
+    <Content Include="app\components\directives\header-menu\header-menu.html" />
+    <Content Include="app\components\directives\header-menu\header-menu.js" />
+    <Content Include="app\components\partials\eventCreate\eventCreate.html" />
+    <Content Include="app\components\partials\eventCreate\eventCreate.module.js" />
+    <Content Include="app\components\partials\eventJoin\eventJoin.html" />
+    <Content Include="app\components\partials\eventJoin\eventJoin.module.js" />
+    <Content Include="app\components\partials\home\home.html" />
     <Content Include="app\components\partials\home\home.module.js" />
     <Content Include="app\shared\script.js" />
     <Content Include="app\shared\stylesheet.css" />
+    <Content Include="externals\angularjs\angular-ui-router.js" />
     <Content Include="externals\angularjs\angular.js" />
     <Content Include="externals\bootstrap\css\bootstrap-responsive.css" />
     <Content Include="externals\bootstrap\css\bootstrap-responsive.min.css" />
@@ -95,9 +104,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="app\components\directives\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
