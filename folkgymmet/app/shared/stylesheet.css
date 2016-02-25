@@ -1,8 +1,26 @@
-/* css reset is done through bootstrap*/
+/* css reset is mostly done through bootstrap*/
+
+/* custom reset */
+body{
+	font-size: 14px;
+}
+ul, li{/* removing list indentation (all needed) */
+	list-style-type:none;
+	list-style-position:inside; 
+	margin:0;
+    padding:0; 
+	/* outline: 1px solid red; */
+}
+
+/* END custom reset */
 
 .container_main{
     position: relative;
     margin: 0 auto;
+	top: 5px;
     width: 99%;
     outline: 1px solid black;
+}
+.button-straight{
+	border-radius: 0;
 }

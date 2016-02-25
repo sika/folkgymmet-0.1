@@ -1,4 +1,4 @@
-var myApp = angular.module('app', ['ui.router','eventJoin.module', 'eventCreate.module', 'headerMenu.module']);
+var myApp = angular.module('app', ['ui.router','eventJoin.module', 'eventCreate.module', 'headerMenu.module', 'headerLogin.module']);
 	myApp.controller('appController', function() {
 		var appCont = this;
 		appCont.shit = "hhh";
@@ -14,5 +14,8 @@ var myApp = angular.module('app', ['ui.router','eventJoin.module', 'eventCreate.
 		}).state('eventCreate', {
 		    url: '/eventCreate',
 		    templateUrl: 'app/components/partials/eventCreate/eventCreate.html'
+		}).state('discussion', {
+			url: '/discussion',
+			templateUrl: 'app/components/partials/discussion/discussion.html'
 		})
 	});
