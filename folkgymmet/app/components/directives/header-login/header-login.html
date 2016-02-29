@@ -1,8 +1,13 @@
-﻿<button class="btn btn-primary button-straight">Logga in/registrera</button>
-<div>
-<!-- <input type="text" placeholder="användarnamn"></input> -->
+﻿<button class="btn btn-primary button-straight" ng-click="loginDetailsDisplay = !loginDetailsDisplay">Logga in/registrera</button>
+<div ng-show="loginDetailsDisplay">
 	<ul> 
 		<li><input type="text" placeholder="användarnamn"></input></li>
 		<li><input type="text" placeholder="lösenord"></input></li>
 	</ul>
+	<button class="btn btn-primary button-straight">Logga in</button>
+	<span>Kom ihåg mig</span>
+	<br>
+	<span>Glömt lösenord</span>
+	<p style="font-weight: bold;">Icons</p>
+	<button class="btn btn-success button-straight">Registrera konto</button>	
 </div>
