@@ -67,9 +67,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\app.js" />
+    <Content Include="app\components\directives\event-type-choose\event-type-choose.css" />
+    <Content Include="app\components\directives\event-type-choose\event-type-choose.html" />
+    <Content Include="app\components\directives\header-login\header-login.css" />
+    <Content Include="app\components\directives\header-login\header-login.html" />
+    <Content Include="app\components\directives\header-login\header-login.js" />
+    <Content Include="app\components\directives\header-login\header-login.module.js" />
     <Content Include="app\components\directives\header-menu\header-menu.css" />
     <Content Include="app\components\directives\header-menu\header-menu.html" />
-    <Content Include="app\components\directives\header-menu\header-menu.js" />
+    <Content Include="app\components\directives\header-menu\header-menu.module.js" />
+    <Content Include="app\components\partials\discussion\discussion.html" />
     <Content Include="app\components\partials\eventCreate\eventCreate.html" />
     <Content Include="app\components\partials\eventCreate\eventCreate.module.js" />
     <Content Include="app\components\partials\eventJoin\eventJoin.html" />
@@ -78,6 +85,7 @@
     <Content Include="app\components\partials\home\home.module.js" />
     <Content Include="app\shared\script.js" />
     <Content Include="app\shared\stylesheet.css" />
+    <Content Include="externals\angularjs\angular-animate.js" />
     <Content Include="externals\angularjs\angular-ui-router.js" />
     <Content Include="externals\angularjs\angular.js" />
     <Content Include="externals\bootstrap\css\bootstrap-responsive.css" />
@@ -91,6 +99,7 @@
     <Content Include="externals\jquery\jquery-1.12.1.js" />
     <Content Include="index.html" />
     <Content Include="packages.config" />
+    <Content Include="app\components\directives\event-type-choose\event-type-choose.module.js" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

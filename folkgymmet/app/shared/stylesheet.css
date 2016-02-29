@@ -3,6 +3,7 @@
 /* custom reset */
 body{
 	font-size: 14px;
+    outline: 1px solid black;
 }
 ul, li{/* removing list indentation (all needed) */
 	list-style-type:none;

@@ -3,7 +3,8 @@
 	width: 12%;
 	right: 0;
     display: inline-block;	
-    outline: 1px solid red;
+    outline: 1px solid black;
+    /*outline: 1px solid red;*/
 }
 .header-login button{
 	width: 100%;

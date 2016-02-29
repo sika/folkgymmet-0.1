@@ -1,4 +1,4 @@
-﻿var mHeaderMenu = angular.module('headerMenu.module', []);
+﻿var mHeaderMenu = angular.module('header-menu.module', []);
 mHeaderMenu.directive('dHeaderMenu', function () {
     return {
         restrict: 'A',
@@ -10,7 +10,3 @@ mHeaderMenu.directive('dHeaderMenu', function () {
         templateUrl: 'app/components/directives/header-menu/header-menu.html'
     }
 });
-//mHeaderMenu.controller('headerMenuController', function ($scope) {
-//    $scope.test = {name: "fff"};
-//    console.log('headerMenuController');
-//});
