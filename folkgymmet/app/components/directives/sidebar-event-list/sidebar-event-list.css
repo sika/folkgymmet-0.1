@@ -7,12 +7,11 @@
 	margin-top: 150px;
 	width: 20%;
 	box-sizing: border-box;
-	height: 100px;
+	height: 300px;
 	padding: 10px 20px;
-	text-align: center;	
-	/* vertical-align: top; */
+	text-align: center;
+    overflow: hidden;   	
 	outline: 1px solid red;
-    /* outline: 1px solid black; */
 }
 .sidebar-event-list li{
 	list-style-type: square;
