@@ -1,6 +1,7 @@
 ﻿.header-menu{
     position:relative;
-    display: inline-block;	
+    display: inline-block;
+	width: 80%;
     /*outline: 1px solid green;*/
     outline: 1px solid black;
 }

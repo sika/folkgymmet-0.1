@@ -16,6 +16,8 @@
     <script src="app/components/directives/header-menu/header-menu.module.js"></script>
     <script src="app/components/directives/header-login/header-login.module.js"></script>
     <script src="app/components/directives/event-type-choose/event-type-choose.module.js"></script> 
+    <script src="app/components/directives/sidebar-event-list/sidebar-event-list.module.js"></script> 
+    <script src="app/components/directives/event-search/event-search.module.js"></script> 
     <!-- CSS references -->
     <link href="externals/bootstrap/css/bootstrap.css" rel="stylesheet" />
     <link href="externals/bootstrap/css/normalize.css" rel="stylesheet" />
@@ -23,6 +25,8 @@
     <link href="app/components/directives/header-menu/header-menu.css" rel="stylesheet" />
     <link href="app/components/directives/header-login/header-login.css" rel="stylesheet" />
     <link href="app/components/directives/event-type-choose/event-type-choose.css" rel="stylesheet" />
+    <link href="app/components/directives/sidebar-event-list/sidebar-event-list.css" rel="stylesheet" />
+    <link href="app/components/directives/event-search/event-search.css" rel="stylesheet" />
 </head>
 <body>
     <div class="container_main">
@@ -30,13 +34,24 @@
         <div d-header-menu class="header-menu"></div>
         <!-- directive: login -->
 		<div d-header-login class="header-login"></div>
-        <!-- directive: choose type -->
-        <div d-event-type-choose class="event-type-choose"></div>
-        
-        <!-- Views  -->
-		<div data-ui-view></div>
-        <a ui-sref="eventCreate">Create event</a>
-        <a ui-sref="eventJoin">Join event</a>
+        <!-- directive: choose type --> 
+		<div style="width: 80%; outline: 5px solid green; display: inline-block; vertical-align: top;">
+			<div d-event-type-choose class="event-type-choose"></div
+			<!-- directive: choose type -->
+			<div d-event-search class="event-search"></div>
+			
+			<!-- Views  -->
+			<div data-ui-view class="ui-view_container"></div>
+		</div><!--
+		END Views  
+			
+			Removing white-space
+			
+		directive: dynamic event list 
+		--><div d-sidebar-event-list class="sidebar-event-list"></div>
+<!-- 		
+		<a ui-sref="eventCreate">Create event</a>
+        <a ui-sref="eventJoin">Join event</a> -->
         <!-- directive: contact -->
     </div>
 </body>

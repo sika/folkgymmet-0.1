@@ -1,4 +1,5 @@
-var myApp = angular.module('app', ['ui.router', 'eventJoin.module', 'eventCreate.module', 'header-menu.module', 'header-login.module', 'event-type-choose.module']);
+var myApp = angular.module('app', ['ui.router', 'eventJoin.module', 'eventCreate.module', 'header-menu.module', 
+'header-login.module', 'event-type-choose.module', 'sidebar-event-list.module', 'event-search.module']);
 	myApp.controller('appController', function() {
 		var appCont = this;
 		appCont.shit = "hhh";

@@ -25,3 +25,10 @@ ul, li{/* removing list indentation (all needed) */
 .button-straight{
 	border-radius: 0;
 }
+.ui-view_container{
+	/* margin: 0; */
+	outline: 1px solid red;
+	width: 100%;
+	display: inline-block;
+	box-sizing: border-box;
+}
