@@ -3,7 +3,7 @@
 /* custom reset */
 body{
 	font-size: 14px;
-    outline: 1px solid black;
+    /*outline: 1px solid black;*/
 }
 ul, li{/* removing list indentation (all needed) */
 	list-style-type:none;
@@ -25,7 +25,7 @@ ul, li{/* removing list indentation (all needed) */
 .block_main{
     width: 80%;
     margin: 40px 0; 
-    outline: 5px solid green; 
+    /*outline: 5px solid green;*/ 
     display: inline-block; 
     vertical-align: top;
 }
@@ -35,7 +35,7 @@ ul, li{/* removing list indentation (all needed) */
 .ui-view_container{
 	/* margin: 0; */
 	text-align: center;
-	outline: 1px solid red;
+	/*outline: 1px solid red;*/
     height: 400px;
 	width: 100%;
 	display: inline-block;

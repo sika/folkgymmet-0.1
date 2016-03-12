@@ -67,9 +67,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\app.js" />
-    <Content Include="app\components\directives\event-search\event-search.css" />
-    <Content Include="app\components\directives\event-search\event-search.html" />
-    <Content Include="app\components\directives\event-search\event-search.module.js" />
     <Content Include="app\components\directives\event-type-choose\event-type-choose.css" />
     <Content Include="app\components\directives\event-type-choose\event-type-choose.html" />
     <Content Include="app\components\directives\header-login\header-login.css" />
