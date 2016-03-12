@@ -89,8 +89,10 @@
     <Content Include="app\shared\script.js" />
     <Content Include="app\shared\stylesheet.css" />
     <Content Include="externals\angularjs\angular-animate.js" />
+    <Content Include="externals\angularjs\angular-google-maps.js" />
     <Content Include="externals\angularjs\angular-ui-router.js" />
     <Content Include="externals\angularjs\angular.js" />
+    <Content Include="externals\angularjs\lodash.js" />
     <Content Include="externals\bootstrap\css\bootstrap-responsive.css" />
     <Content Include="externals\bootstrap\css\bootstrap-responsive.min.css" />
     <Content Include="externals\bootstrap\css\bootstrap.css" />
@@ -116,7 +118,9 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="externals\angularjs\angular-simple-logger\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

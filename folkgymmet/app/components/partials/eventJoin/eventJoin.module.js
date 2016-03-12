@@ -1,10 +1,14 @@
 angular.module('eventJoin.module', [])
 	.controller('eventJoinController', function ($scope) {
+	    var map;
 	    function initMap() {
-	        $scope.mapDiv = document.getElementById('googlemap');
-	        $scope.map = new google.maps.Map($scope.mapDiv, {
-	            center: { lat: 44.540, lng: -78.546 },
+	        map = new google.maps.Map(document.getElementById('googlemap'), {
+	            center: { lat: -34.397, lng: 150.644 },
 	            zoom: 8
 	        });
-        }
+	    }
+	    angular.element(document).ready(function () {
+            //run when DOM is ready
+	        initMap();
+	    });
     });

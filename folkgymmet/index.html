@@ -7,18 +7,31 @@
     <link rel="shortcut icon" href=""><!-- for removing favicon error -->     
     <!-- script references -->
 	<!-- <script src="externals/jquery/jquery-1.12.1.js"></script> -->
+    <script src="externals/angularjs/lodash.js"></script>
     <script src="externals/angularjs/angular.js"></script>
     <script src="externals/angularjs/angular-ui-router.js"></script>
     <script src="externals/angularjs/angular-animate.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js" async defer></script>
+    <script src="externals/angularjs/angular-simple-logger/angular-simple-logger.js"></script>
+    <script src="externals/angularjs/angular-google-maps.js"></script>
 	<script src="app/app.js"></script>
     <script src="app/components/partials/eventJoin/eventJoin.module.js"></script>
     <script src="app/components/partials/eventCreate/eventCreate.module.js"></script>
     <script src="app/components/directives/header-menu/header-menu.module.js"></script>
     <script src="app/components/directives/header-login/header-login.module.js"></script>
     <script src="app/components/directives/event-type-choose/event-type-choose.module.js"></script> 
-    <script src="app/components/directives/sidebar-event-list/sidebar-event-list.module.js"></script> 
-    <!-- <script src="app/components/directives/event-search/event-search.module.js"></script>  -->
+    <script src="app/components/directives/sidebar-event-list/sidebar-event-list.module.js"></script>
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('googlemap'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 8
+        });
+      }
+    </script>
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxVXxoZdVh3xxsRASsvUcJD1M9sieJzVE"></script>
+    <!--&callback=initMap--> 
     <!-- CSS references -->
     <link href="externals/bootstrap/css/bootstrap.css" rel="stylesheet" />
     <link href="externals/bootstrap/css/normalize.css" rel="stylesheet" />
@@ -38,9 +51,7 @@
 		<div d-header-login class="header-login"></div>
         <!-- directive: choose type --> 
 		<div class="block_main">
-			<div d-event-type-choose class="event-type-choose"></div
-			<!-- directive: choose type -->
-			<!-- <div d-event-search class="event-search"></div> -->
+			<div d-event-type-choose class="event-type-choose"></div>
 			<!-- Views  -->
 			<div data-ui-view class="ui-view_container"></div>
 		</div><!--
