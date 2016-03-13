@@ -3,8 +3,9 @@ angular.module('eventJoin.module', [])
 	    var map;
 	    function initMap() {
 	        map = new google.maps.Map(document.getElementById('googlemap'), {
-	            center: { lat: -34.397, lng: 150.644 },
-	            zoom: 8
+                //karta över sverige
+	            center: { lat: 62.5421031, lng: 19.7477994 },
+	            zoom: 5
 	        });
 	    }
 	    angular.element(document).ready(function () {
