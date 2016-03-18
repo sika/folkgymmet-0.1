@@ -3,11 +3,23 @@ angular.module('eventJoin.module', [])
 .controller('eventJoinController', function ($scope) {
 	angular.element(document).ready(function () {
 		//run when DOM is ready
+		console.log($scope.markersEvent[0].city);
 		initMap();
-
 		for (i = 0; i < $scope.markersEvent.length; i++) {
 			initMarkers($scope.markersEvent[i]); //create initial markers
 		}
+		//['shit', 'koka']
+		//value : value.city
+		jQuery("#tags").autocomplete({
+			source : function (request, response) {
+				response(jQuery.map($scope.markersEvent, function (value, key) {
+						return {
+							label : value.city,
+							value : value.id
+						}
+					}));
+			}
+		});
 	});
 	//Pre-load document.ready
 	function initMap() {
@@ -30,22 +42,22 @@ angular.module('eventJoin.module', [])
 		});
 	}
 	$scope.markersEvent = [{
-		city : 'Göteborg',
-		desc : 'This is the best city in the world!',
-		lat : 57.716610,
-		lang : 11.973904
-	}, {
-		city : 'Stockholm',
-		desc : 'Shit city',
-		lat : 59.336574,
-		lang : 18.067879
-	}, {
-		city : 'Kiruna',
-		desc : 'Shit city',
-		lat : 67.858475,
-		lang : 20.225530
-	}
-];
+			city : 'Göteborg',
+			desc : 'This is the best city in the world!',
+			lat : 57.716610,
+			lang : 11.973904
+		}, {
+			city : 'Stockholm',
+			desc : 'Shit city',
+			lat : 59.336574,
+			lang : 18.067879
+		}, {
+			city : 'Kiruna',
+			desc : 'Shit city',
+			lat : 67.858475,
+			lang : 20.225530
+		}
+	];
 })
 //END controller
 //Directive start
@@ -55,7 +67,9 @@ angular.module('eventJoin.module', [])
 		template :
 		'Name: ',
 		link : function (scope, element, attr) {
-			//createMarkers(markersEvent[0]);
+			$("#tags").autocomplete({
+				source : ['shit', 'koka']
+			});
 		}
 	}
 });
@@ -63,23 +77,23 @@ angular.module('eventJoin.module', [])
 //data
 /*
 var markersEvent = [{
-		city : 'Göteborg',
-		desc : 'This is the best city in the world!',
-		lat : 57.716610,
-		lang : 11.973904
-	}, {
-		city : 'Stockholm',
-		desc : 'Shit city',
-		lat : 59.336574,
-		lang : 18.067879
-	}, {
-		city : 'Kiruna',
-		desc : 'Shit city',
-		lat : 67.858475,
-		lang : 20.225530
-	}
+city : 'Göteborg',
+desc : 'This is the best city in the world!',
+lat : 57.716610,
+lang : 11.973904
+}, {
+city : 'Stockholm',
+desc : 'Shit city',
+lat : 59.336574,
+lang : 18.067879
+}, {
+city : 'Kiruna',
+desc : 'Shit city',
+lat : 67.858475,
+lang : 20.225530
+}
 ];
-*/
+ */
 /*
 Todo:
 - search markers
