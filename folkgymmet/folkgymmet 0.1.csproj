@@ -66,6 +66,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="#extras\balsamiq\index.png" />
+    <Content Include="#extras\images\bgd_forrest.jpg" />
     <Content Include="app\app.js" />
     <Content Include="app\components\directives\event-type-choose\event-type-choose.css" />
     <Content Include="app\components\directives\event-type-choose\event-type-choose.html" />
@@ -90,6 +92,8 @@
     <Content Include="app\shared\stylesheet.css" />
     <Content Include="externals\angularjs\angular-animate.js" />
     <Content Include="externals\angularjs\angular-google-maps.js" />
+    <Content Include="externals\angularjs\angular-simple-logger\angular-simple-logger.js" />
+    <Content Include="externals\angularjs\angular-simple-logger\dist\angular-simple-logger.js" />
     <Content Include="externals\angularjs\angular-ui-router.js" />
     <Content Include="externals\angularjs\angular.js" />
     <Content Include="externals\angularjs\lodash.js" />
@@ -102,9 +106,28 @@
     <Content Include="externals\bootstrap\js\bootstrap.js" />
     <Content Include="externals\bootstrap\js\bootstrap.min.js" />
     <Content Include="externals\jquery\jquery-1.12.1.js" />
+    <Content Include="externals\jquery\jquery-ui\external\jquery\jquery.js" />
+    <Content Include="externals\jquery\jquery-ui\images\ui-icons_444444_256x240.png" />
+    <Content Include="externals\jquery\jquery-ui\images\ui-icons_555555_256x240.png" />
+    <Content Include="externals\jquery\jquery-ui\images\ui-icons_777620_256x240.png" />
+    <Content Include="externals\jquery\jquery-ui\images\ui-icons_777777_256x240.png" />
+    <Content Include="externals\jquery\jquery-ui\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="externals\jquery\jquery-ui\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="externals\jquery\jquery-ui\index.html" />
+    <Content Include="externals\jquery\jquery-ui\jquery-ui.css" />
+    <Content Include="externals\jquery\jquery-ui\jquery-ui.js" />
+    <Content Include="externals\jquery\jquery-ui\jquery-ui.min.css" />
+    <Content Include="externals\jquery\jquery-ui\jquery-ui.min.js" />
+    <Content Include="externals\jquery\jquery-ui\jquery-ui.structure.css" />
+    <Content Include="externals\jquery\jquery-ui\jquery-ui.structure.min.css" />
+    <Content Include="externals\jquery\jquery-ui\jquery-ui.theme.css" />
+    <Content Include="externals\jquery\jquery-ui\jquery-ui.theme.min.css" />
     <Content Include="index.html" />
     <Content Include="packages.config" />
     <Content Include="app\components\directives\event-type-choose\event-type-choose.module.js" />
+    <Content Include="#extras\balsamiq\folkgymmet_0.1.bmpr" />
+    <Content Include="#extras\Req spec.docx" />
+    <Content Include="#extras\todo.docx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -118,9 +141,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="externals\angularjs\angular-simple-logger\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
