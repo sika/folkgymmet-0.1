@@ -128,6 +128,7 @@
     <Content Include="#extras\balsamiq\folkgymmet_0.1.bmpr" />
     <Content Include="#extras\Req spec.docx" />
     <Content Include="#extras\todo.docx" />
+    <Content Include="app\components\directives\search-bar\search-bar.module.js" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
