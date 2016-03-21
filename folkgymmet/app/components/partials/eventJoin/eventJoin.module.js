@@ -32,7 +32,7 @@ angular.module('eventJoin.module', [])
     $scope.markersEvent = [{
         //value: "goteborg",
         label: "göteborg yeah",
-        city: 'Göteborg',
+		city: 'Göteborg',
         desc: 'This is the best city in the world!',
         lat: 57.716610,
         lang: 11.973904

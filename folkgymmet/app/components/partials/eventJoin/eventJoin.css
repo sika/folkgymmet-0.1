@@ -9,6 +9,9 @@
     padding-bottom: 60%;
     width: 80%;
 }
+    	.odd{
+    		color:red;
+    	}
 /*.container_map{
     display: inline-block;
     border: 1px solid black;
