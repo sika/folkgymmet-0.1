@@ -7,7 +7,6 @@ angular.module('eventJoin.module', [])
         for (i = 0; i < $scope.markersEvent.length; i++) {
             initMarkers($scope.markersEvent[i]); //create initial markers
         }
-
     });
     //Pre-load document.ready
     function initMap() {

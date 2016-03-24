@@ -2,7 +2,7 @@
 .directive('dSearchBar', function () {
 	return {
 		restrict : 'A',
-		template : '<input id="project" placeholder="t ex sport, plats och/eller tid"></input>',
+		template : '<input id="project" placeholder="sport, plats och/eller tid"></input>',
 		link : function (scope, element, attr) {
 
 			ftnAutoComplete();
@@ -40,4 +40,3 @@
 		}
 	}
 });
-//.find("li:odd").addClass("odd")
