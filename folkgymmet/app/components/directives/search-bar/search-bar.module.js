@@ -3,10 +3,11 @@
 	return {
 		restrict : 'A',
 		template : '<input id="project" placeholder="sport, plats och/eller tid"></input>',
-		link : function (scope, element, attr) {
+		controller: 'eventJoinController',
+		scope: {},
+		link : function (scope, element, attr, ctrl) {
 
 			ftnAutoComplete();
-
 			function ftnAutoComplete() {
 				var counter = 0;
 				jQuery("#project").autocomplete({
