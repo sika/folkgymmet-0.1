@@ -1,6 +1,6 @@
 angular.module('eventJoin.module', [])
 //controller start
-.controller('eventJoinController', function ($scope) {
+.controller('eventJoinController', function ($scope, appFactory) {
     angular.element(document).ready(function () {
         //run when DOM is ready
         initMap();
@@ -19,63 +19,19 @@ angular.module('eventJoin.module', [])
             zoom: 5,
         };
         $scope.map = new google.maps.Map(document.getElementById('googlemap'), $scope.mapProp);
-    }
+    }	
     function initMarkers(info) {
-        console.log("initMarkers function");
+        //console.log("initMarkers function");
         new google.maps.Marker({
             map: $scope.map,
             position: new google.maps.LatLng(info.lat, info.lang),
             title: "test"
         });
     }
-    $scope.markersEvent = [{
-        //value: "goteborg",
-        label: "göteborg yeah",
-		city: 'Göteborg',
-        desc: 'This is the best city in the world!',
-        lat: 57.716610,
-        lang: 11.973904
-    }, {
-        //value: "stockholm",
-        label: "sthlm",
-        city: 'Stockholm',
-        desc: 'This is Stockholm',
-        lat: 59.336574,
-        lang: 18.067879
-    }, {
-        //value: "kiruna",
-        label: "kirri yeah",
-        city: 'Kiruna',
-        desc: 'This is Kiruna',
-        lat: 67.858475,
-        lang: 20.225530
-    }
-    ];
+	$scope.markersEvent = appFactory.getInitMarkers();
 })
 //END controller
-//Directive start
 
-//END Directive
-//data
-/*
-var markersEvent = [{
-city : 'Göteborg',
-desc : 'This is the best city in the world!',
-lat : 57.716610,
-lang : 11.973904
-}, {
-city : 'Stockholm',
-desc : 'Shit city',
-lat : 59.336574,
-lang : 18.067879
-}, {
-city : 'Kiruna',
-desc : 'Shit city',
-lat : 67.858475,
-lang : 20.225530
-}
-];
- */
 /*
 Todo:
 - search markers

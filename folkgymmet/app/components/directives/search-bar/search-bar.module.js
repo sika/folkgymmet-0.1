@@ -1,18 +1,21 @@
 ﻿angular.module('search-bar.module', [])
 .directive('dSearchBar', function () {
 	return {
-		restrict : 'A',
+		restrict : 'E',
 		template : '<input id="project" placeholder="sport, plats och/eller tid"></input>',
-		controller: 'eventJoinController',
-		scope: {},
+		//controller: 'eventJoinController',
+		scope: {
+			markersEvent: "=markersEvent"
+		},
 		link : function (scope, element, attr, ctrl) {
-
+			console.log(scope.markersEvent);
 			ftnAutoComplete();
+			
 			function ftnAutoComplete() {
 				var counter = 0;
 				jQuery("#project").autocomplete({
 					minLength : 0,
-					source : scope.markersEvent,
+					source : scope.markersEvent,//getSource(), //scope.markersEvent;
 					focus : function (event, ui) {
 						jQuery("#project").val(ui.item.label);
 						return false;
@@ -38,6 +41,9 @@
 					
 				};
 			}
+/*			function getSource(){
+				return scope.markersEvent;
+			}*/
 		}
 	}
 });
