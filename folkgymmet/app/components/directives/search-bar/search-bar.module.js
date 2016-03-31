@@ -2,7 +2,7 @@
 .directive('dSearchBar', function () {
 	return {
 		restrict : 'E',
-		template : '<input id="project" placeholder="sport, plats och/eller tid"></input>',
+		template : '<input id="project" class="search-bar" placeholder="sport, plats och/eller tid"></input><img class="search-bar-icon" src="externals/img/ic_search_black_36px.svg" alt="Sök">',
 		//controller: 'eventJoinController',
 		scope: {
 			markersEvent: "=markersEvent"
@@ -41,9 +41,6 @@
 					
 				};
 			}
-/*			function getSource(){
-				return scope.markersEvent;
-			}*/
 		}
 	}
 });

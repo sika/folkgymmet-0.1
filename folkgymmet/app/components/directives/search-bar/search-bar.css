@@ -1,0 +1,7 @@
+.search-bar{
+	height: 36px;
+	box-sizing: border-box;
+}.search-bar-icon{
+	float: left;
+	position: absolute;
+}

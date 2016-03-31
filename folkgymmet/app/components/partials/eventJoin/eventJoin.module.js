@@ -28,7 +28,7 @@ angular.module('eventJoin.module', [])
             title: "test"
         });
     }
-	$scope.markersEvent = appFactory.getInitMarkers();
+	$scope.markersEvent = appFactory.getInitMarkers(); //get marker objects from app.js factory
 })
 //END controller
 
