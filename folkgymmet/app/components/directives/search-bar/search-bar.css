@@ -1,7 +1,18 @@
+.dSearch-bar-container{
+    /*width: 100%;
+    display: block;*/
+}
 .search-bar{
 	height: 36px;
 	box-sizing: border-box;
+    border: 1px solid grey;
+    position: relative;
+    /*text-align: left;*/
 }.search-bar-icon{
-	float: left;
-	position: absolute;
+	/*float:left;*/
+     position: absolute;
+}.search-bar-results{
+	/*float: left;*/
+     position: absolute;
+     /*left: 36px;*/
 }

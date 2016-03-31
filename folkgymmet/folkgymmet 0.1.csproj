@@ -78,6 +78,8 @@
     <Content Include="app\components\directives\header-menu\header-menu.css" />
     <Content Include="app\components\directives\header-menu\header-menu.html" />
     <Content Include="app\components\directives\header-menu\header-menu.module.js" />
+    <Content Include="app\components\directives\search-bar\search-bar.css" />
+    <Content Include="app\components\directives\search-bar\search-bar.html" />
     <Content Include="app\components\directives\sidebar-event-list\sidebar-event-list.css" />
     <Content Include="app\components\directives\sidebar-event-list\sidebar-event-list.html" />
     <Content Include="app\components\directives\sidebar-event-list\sidebar-event-list.module.js" />
@@ -105,6 +107,7 @@
     <Content Include="externals\bootstrap\img\glyphicons-halflings.png" />
     <Content Include="externals\bootstrap\js\bootstrap.js" />
     <Content Include="externals\bootstrap\js\bootstrap.min.js" />
+    <Content Include="externals\img\ic_search_black_36px.svg" />
     <Content Include="externals\jquery\jquery-1.12.1.js" />
     <Content Include="externals\jquery\jquery-ui\external\jquery\jquery.js" />
     <Content Include="externals\jquery\jquery-ui\images\ui-icons_444444_256x240.png" />

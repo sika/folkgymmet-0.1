@@ -1,8 +1,8 @@
-﻿angular.module('search-bar.module', [])
+angular.module('search-bar.module', [])
 .directive('dSearchBar', function () {
 	return {
 		restrict : 'E',
-		template : '<input id="project" class="search-bar" placeholder="sport, plats och/eller tid"></input><img class="search-bar-icon" src="externals/img/ic_search_black_36px.svg" alt="Sök">',
+		templateUrl : 'app/components/directives/search-bar/search-bar.html',
 		//controller: 'eventJoinController',
 		scope: {
 			markersEvent: "=markersEvent"
