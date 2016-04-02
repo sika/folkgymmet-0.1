@@ -3,30 +3,38 @@ angular.module('search-bar.module', [])
 	return {
 		restrict : 'E',
 		templateUrl : 'app/components/directives/search-bar/search-bar.html',
-		//controller: 'eventJoinController',
-		scope: {
-			markersEvent: "=markersEvent"
+		controller: function ($scope) {
+		    $scope.hits = null;
 		},
-		link : function (scope, element, attr, ctrl) {
-			console.log(scope.markersEvent);
+		scope: {
+		    markersEvent: "=",
+		    sHits: "=hits"
+		},
+		link: function (scope, element, attr, ctrl) {
 			ftnAutoComplete();
 			
 			function ftnAutoComplete() {
 				var counter = 0;
 				jQuery("#project").autocomplete({
 					minLength : 0,
-					source : scope.markersEvent,//getSource(), //scope.markersEvent;
+					source: scope.markersEvent,
+					response: function (event, ui) {
+					    scope.hits = ui.content.length;
+					    scope.$digest(); //updating THIS scopes UI
+					},
 					focus : function (event, ui) {
 						jQuery("#project").val(ui.item.label);
 						return false;
 					},
 					select : function (event, ui) {
-						jQuery("#project").val(ui.item.label);
+					    jQuery("#project").val(ui.item.label);
+					    scope.hits = 1;
+					    scope.$digest();
 						return false;
 					}
 				})
 				.autocomplete("instance")._renderItem = function (ul, item) {
-					counter++;
+				    counter++;
 					if (counter % 2 == 0) {
 						//console.log(counter);
 						return jQuery("<li>")
@@ -38,8 +46,7 @@ angular.module('search-bar.module', [])
 						.append(item.label + '<br>' +item.desc)						
 						.appendTo(ul);						
 					}
-					
-				};
+				};				
 			}
 		}
 	}
