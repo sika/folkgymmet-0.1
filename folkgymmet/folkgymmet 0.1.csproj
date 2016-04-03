@@ -71,6 +71,8 @@
     <Content Include="app\app.js" />
     <Content Include="app\components\directives\event-type-choose\event-type-choose.css" />
     <Content Include="app\components\directives\event-type-choose\event-type-choose.html" />
+    <Content Include="app\components\directives\google-map\google-map.html" />
+    <Content Include="app\components\directives\google-map\google-map.module.js" />
     <Content Include="app\components\directives\header-login\header-login.css" />
     <Content Include="app\components\directives\header-login\header-login.html" />
     <Content Include="app\components\directives\header-login\header-login.js" />
@@ -86,6 +88,7 @@
     <Content Include="app\components\partials\discussion\discussion.html" />
     <Content Include="app\components\partials\eventCreate\eventCreate.html" />
     <Content Include="app\components\partials\eventCreate\eventCreate.module.js" />
+    <Content Include="app\components\partials\eventJoin\eventJoin.css" />
     <Content Include="app\components\partials\eventJoin\eventJoin.html" />
     <Content Include="app\components\partials\eventJoin\eventJoin.module.js" />
     <Content Include="app\components\partials\home\home.html" />

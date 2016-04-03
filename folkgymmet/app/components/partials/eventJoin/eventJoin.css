@@ -1,7 +1,7 @@
 .type-group {
     padding: 20px 0;
 }
-#googlemap {
+.cgooglemap {
     display: inline-block;
     border: 1px solid black;
     /*Below css makes div square responsive*/
