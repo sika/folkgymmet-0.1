@@ -28,7 +28,6 @@
                 scope.map = new google.maps.Map(document.getElementById(attr.id), scope.mapProp);
             }
             function initMarkers(info) {
-                //console.log("initMarkers function");
                 new google.maps.Marker({
                     map: scope.map,
                     position: new google.maps.LatLng(info.lat, info.lang),

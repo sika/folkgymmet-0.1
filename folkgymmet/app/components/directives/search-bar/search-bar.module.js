@@ -19,6 +19,7 @@ angular.module('search-bar.module', [])
 					minLength : 0,
 					source: scope.markersEvent,
 					response: function (event, ui) {
+					    console.log(ui.content);
 					    scope.hits = ui.content.length;
 					    scope.$digest(); //updating THIS scopes UI
 					},
@@ -36,12 +37,10 @@ angular.module('search-bar.module', [])
 				.autocomplete("instance")._renderItem = function (ul, item) {
 				    counter++;
 					if (counter % 2 == 0) {
-						//console.log(counter);
 						return jQuery("<li>")
 						.append(item.label + '<br>' +item.desc).css('background-color', 'lightgray')
 						.appendTo(ul);
 					}else{
-						//console.log(counter);
 						return jQuery("<li>")
 						.append(item.label + '<br>' +item.desc)						
 						.appendTo(ul);						
