@@ -15,7 +15,11 @@ myApp.config(function ($stateProvider, $urlRouterProvider) {
         templateUrl: 'app/components/partials/discussion/discussion.html'
     })
 });
-
+myApp.controller('appController', function ($scope) {
+	console.log("appController:");
+    console.log($scope.$id);
+    //$scope.markersEvent = appFactory.getInitMarkers(); //get marker objects from app.js factory
+})
 /*factory declaration*/
 myApp.factory('appFactory', function () {
     /*empty object declaration*/

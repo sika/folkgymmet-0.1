@@ -1,11 +1,14 @@
-﻿angular.module('google-map.module', [])
+﻿angular.module('google-map.module', ['search-bar.module'])
+.controller('google-map.controller', function($scope, appFactory, searchFactory){
+			console.log(searchFactory);
+			//$scope.api = searchFactory;
+			//$scope.$watch('api.search', toggledisplay)
+            $scope.markersEvent = appFactory.getInitMarkers(); //get marker objects from app.js factory using parent scope
+        })
 .directive('dGoogleMap', function () {
     return {
         restrict: 'E',
-        controller: function ($scope, appFactory) {
-            console.log($scope);
-            $scope.markersEvent = appFactory.getInitMarkers(); //get marker objects from app.js factory using parent scope
-        },
+        controller: 'google-map.controller',
         //template: '<div></div>',
         //replace: true,
         link: function (scope, elem, attr) {
