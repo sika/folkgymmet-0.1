@@ -1,18 +1,19 @@
 angular.module('search-bar.module', [])
 .factory('searchFactory', function () {
 	return {
-		shit: "shittta"
+		filteredMarkers: [{}],
+        setFilteredMarkers: function(arrMarkers) {
+			this.filteredMarkers = arrMarkers; //set new array for markers to filter (see google-map watch)
+			//console.log(this);
+        }		
 	}
-	//var factory = {};
-	//return factory;
 })
 .controller('search-bar.controller', function ($scope, appFactory, searchFactory){
 			$scope.api = searchFactory;
-			$scope.$watch('api.shit', console.log("api changed"));
 			$scope.markersEvent = appFactory.getInitMarkers();
 		    $scope.hits = null;
 })
-.directive('dSearchBar', function () {
+.directive('dSearchBar', ['searchFactory', function(searchFactory) {
 	return {
 		restrict : 'E',
 		templateUrl : 'app/components/directives/search-bar/search-bar.html',
@@ -26,9 +27,8 @@ angular.module('search-bar.module', [])
 					minLength : 0,
 					source: scope.markersEvent,
 					response: function (event, ui) {
-					    //console.log(ui.content);
 					    scope.hits = ui.content.length;
-						setFilteredMarkers(ui.content);
+						//setFilteredMarkers(ui.content);
 					    scope.$digest(); //updating THIS scopes UI
 					},
 					focus : function (event, ui) {
@@ -37,7 +37,7 @@ angular.module('search-bar.module', [])
 					},
 					select : function (event, ui) {
 					    jQuery("#project").val(ui.item.label);
-						//console.log(ui.item);
+						setFilteredMarkers([ui.item]); //pass object as array
 					    scope.hits = 1;
 					    scope.$digest();
 						return false;
@@ -57,9 +57,8 @@ angular.module('search-bar.module', [])
 				};				
 			}
 			function setFilteredMarkers(arrMarkers){
-				//console.log(arrMarkers.length);
-				
+				searchFactory.setFilteredMarkers(arrMarkers); //pass array to searchFactory
 			}
 		}
 	}
-});
+}]);

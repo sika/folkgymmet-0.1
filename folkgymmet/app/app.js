@@ -25,18 +25,21 @@ myApp.factory('appFactory', function () {
     /*empty object declaration*/
     var factory = {};
     var markersEvent = [{
+		id: 1,
         label: "göteborg yeah",
         city: 'Göteborg',
         desc: 'This is the best city in the world!',
         lat: 57.716610,
         lang: 11.973904
     }, {
+		id: 2,
         label: "sthlm",
         city: 'Stockholm',
         desc: 'This is Stockholm',
         lat: 59.336574,
         lang: 18.067879
     }, {
+		id: 3,
         label: "kirri yeah",
         city: 'Kiruna',
         desc: 'This is Kiruna',
