@@ -2,7 +2,7 @@ angular.module('search-bar.module', [])
 .factory('searchFactory', function () {
 	return {
 		filteredMarkers: [{}],
-        setFilteredMarkers: function(arrMarkers) {
+        setSearchedMarkers: function(arrMarkers) {
 			this.filteredMarkers = arrMarkers; //set new array for markers to filter (see google-map watch)
 			//console.log(this);
         }		
@@ -12,6 +12,7 @@ angular.module('search-bar.module', [])
 			$scope.api = searchFactory;
 			$scope.markersEvent = appFactory.getInitMarkers();
 		    $scope.hits = null;
+			$scope.searchedMarkers = [];
 })
 .directive('dSearchBar', ['searchFactory', function(searchFactory) {
 	return {
@@ -20,7 +21,10 @@ angular.module('search-bar.module', [])
 		controller: "search-bar.controller",
 		link: function (scope, element, attr) {
 			ftnAutoComplete();
-			
+			scope.search = function (){
+				console.log("test called");
+				setSearchedMarkers(scope.searchedMarkers);
+			}
 			function ftnAutoComplete() {
 				var counter = 0;
 				jQuery("#project").autocomplete({
@@ -28,7 +32,8 @@ angular.module('search-bar.module', [])
 					source: scope.markersEvent,
 					response: function (event, ui) {
 					    scope.hits = ui.content.length;
-						//setFilteredMarkers(ui.content);
+						scope.searchedMarkers = ui.content; //set to latest "finished" search (ready-set when clicking to search in view)
+						//setSearchedMarkers(ui.content);
 					    scope.$digest(); //updating THIS scopes UI
 					},
 					focus : function (event, ui) {
@@ -37,7 +42,7 @@ angular.module('search-bar.module', [])
 					},
 					select : function (event, ui) {
 					    jQuery("#project").val(ui.item.label);
-						setFilteredMarkers([ui.item]); //pass object as array
+						setSearchedMarkers([ui.item]); //pass object as array
 					    scope.hits = 1;
 					    scope.$digest();
 						return false;
@@ -56,9 +61,10 @@ angular.module('search-bar.module', [])
 					}
 				};				
 			}
-			function setFilteredMarkers(arrMarkers){
-				searchFactory.setFilteredMarkers(arrMarkers); //pass array to searchFactory
+			function setSearchedMarkers(arrMarkers){
+				searchFactory.setSearchedMarkers(arrMarkers); //pass array to searchFactory
 			}
-		}
-	}
-}]);
+			
+		}//Link END
+	}//return END
+}]); //directive END

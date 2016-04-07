@@ -1,9 +1,6 @@
 ﻿angular.module('google-map.module', ['search-bar.module'])
 .controller('google-map.controller', function ($scope, appFactory, searchFactory) {
-
 	$scope.api = searchFactory;
-	//console.log($scope.api.filteredMarkers);
-
 	$scope.markersEvent = appFactory.getInitMarkers(); //get marker objects from app.js factory using parent scope
 })
 .directive('dGoogleMap', function () {
@@ -13,7 +10,6 @@
 		//template: '<div></div>',
 		//replace: true,
 		link : function (scope, elem, attr) {
-			//console.log(scope.api);
 			var gMarkers = [];
 			angular.element(document).ready(function () {
 				//run when DOM is ready
@@ -24,7 +20,7 @@
 			});
 
 			function initMap() {
-				scope.mapProp = {
+				scope.mapOptions = {
 					//karta över sverige
 					center : {
 						lat : 62.5421031,
@@ -32,13 +28,13 @@
 					},
 					zoom : 5,
 				};
-				scope.map = new google.maps.Map(document.getElementById(attr.id), scope.mapProp);
+				scope.map = new google.maps.Map(document.getElementById(attr.id), scope.mapOptions);
 			}
 			function initMarkers(info) {
 				marker = new google.maps.Marker({
 						map : scope.map,
 						position : new google.maps.LatLng(info.lat, info.lang),
-						id: info.id
+						id : info.id
 						//title: "test"
 					});
 				gMarkers.push(marker);
@@ -51,24 +47,44 @@
 				}
 			});
 			function markersSearchResult(arrMarkers) {
-				
-				/*
-				for (i = 0; i <  arrMarkers.length; i++) {
-					for(j = 0; j < gMarkers.length; j++){
-						if(arrMarkers[i].id == gMarkers[j].id){
-							console("id match");
-							break;
-						}
-						
+				var arrMarkersTmp = [];
+				if (arrMarkers.length == 0) { //array is empty (search empty)
+					for (i = 0; i < gMarkers.length; i++) {
+						gMarkers[i].setVisible(true); //show all markers
 					}
-					
-					gMarkers[i].setVisible(false);
+					zoomToMarkers(gMarkers);
+				} else {
+					for (i = 0; i < gMarkers.length; i++) {
+						gMarkers[i].setVisible(false); //hide all markers before
+					}
+					for (i = 0; i < gMarkers.length; i++) {
+						//search is zero/nothing?
+						for (j = 0; j < arrMarkers.length; j++) {
+							if (arrMarkers[j].id == gMarkers[i].id) {
+								gMarkers[i].setVisible(true);
+								arrMarkersTmp.push(gMarkers[i]);
+								break;
+							}
+						}
+					}
+					zoomToMarkers(arrMarkersTmp);
+				}				
+			} //markersSearchResult END
+			function zoomToMarkers(arrMarkersTmp) {
+				var markers = arrMarkersTmp;
+				var bounds = new google.maps.LatLngBounds();
+				for (var i = 0; i < markers.length; i++) {
+					bounds.extend(markers[i].getPosition());
 				}
-				if (marker.category == category || category.length === 0) {
-					marker.setVisible(true);
+				scope.map.fitBounds(bounds);
+				//remove one zoom level to ensure no marker is on the edge.
+				//scope.map.setZoom(scope.map.getZoom() - 1);
+				// set a minimum zoom
+				// if you got only 1 marker or all markers are on the same address map will be zoomed too much.
+				if (scope.map.getZoom() > 15) {
+					scope.map.setZoom(15);
 				}
-				*/
-			}
+			} //zoomToMarkers END
 		} //Link END
 	} //return END
 }) //Directive END
