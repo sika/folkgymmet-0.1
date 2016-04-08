@@ -51,6 +51,12 @@ myApp.factory('appFactory', function () {
         //console.log(markersEvent);
         return markersEvent;
     };
-
+	
+	var visibleMarkers = [];
+	
+	factory.getVisibleMarkers = function () {
+		return visibleMarkers;
+	}
+	
     return factory;
 });

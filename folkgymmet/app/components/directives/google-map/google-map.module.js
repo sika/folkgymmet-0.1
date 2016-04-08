@@ -2,6 +2,8 @@
 .controller('google-map.controller', function ($scope, appFactory, searchFactory) {
 	$scope.api = searchFactory;
 	$scope.markersEvent = appFactory.getInitMarkers(); //get marker objects from app.js factory using parent scope
+	$scope.visibleMarkers = appFactory.getVisibleMarkers(); //get visible markers
+	console.log(appFactory);
 })
 .directive('dGoogleMap', function () {
 	return {
@@ -68,7 +70,7 @@
 						}
 					}
 					zoomToMarkers(arrMarkersTmp);
-				}				
+				}
 			} //markersSearchResult END
 			function zoomToMarkers(arrMarkersTmp) {
 				var markers = arrMarkersTmp;
