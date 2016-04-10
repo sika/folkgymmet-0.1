@@ -10,7 +10,7 @@ angular.module('search-bar.module', [])
 })
 .controller('search-bar.controller', function ($scope, appFactory, searchFactory){
 			$scope.api = searchFactory;
-			$scope.markersEvent = appFactory.getInitMarkers();
+			$scope.eventsAll = appFactory.getEventsAll();
 		    $scope.hits = null;
 			$scope.searchedMarkers = [];
 })
@@ -29,7 +29,7 @@ angular.module('search-bar.module', [])
 				var counter = 0;
 				jQuery("#project").autocomplete({
 					minLength : 0,
-					source: scope.markersEvent,
+					source: scope.eventsAll,
 					response: function (event, ui) {
 					    scope.hits = ui.content.length;
 						scope.searchedMarkers = ui.content; //set to latest "finished" search (ready-set when clicking to search in view)
