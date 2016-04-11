@@ -4,10 +4,9 @@
 	$scope.apiApp = appFactory;
 	$scope.apiSearch = searchFactory;
 	$scope.mapOptions = $scope.apiMap.mapOptions;
-	console.log($scope.mapOptions);
 	$scope.events = $scope.apiApp.getEventsAll(); //events to base new markers on (long/lat)
 	$scope.gMarkers = []; //google markers array
-	$scope.bounds = $scope.apiMap.getBounds();
+	//$scope.bounds = $scope.apiMap.getBounds();
 })
 .directive('dGoogleMap', function () {
 	return {
@@ -23,8 +22,10 @@
 				for (i = 0; i < scope.events.length; i++) {
 					createMarkers(scope.events[i]); //(re-)create new markers
 				}
-				scope.hiddenMarkers = scope.apiMap.getHiddenMarkers();
-				hideMarkers(scope.gMarkers, scope.hiddenMarkers); //hide gMarkers if earlier set to hidden
+				scope.hiddenMarkers = scope.apiMap.hiddenMarkers;
+				if (scope.hiddenMarkers != null){
+				    hideMarkers(scope.gMarkers, scope.hiddenMarkers); //hide gMarkers if earlier set to hidden
+				}
 			});
 			function createMap() {
 				scope.map = new google.maps.Map(document.getElementById(attr.id), scope.mapOptions);
@@ -49,7 +50,7 @@
 							markers[i].setVisible(visible);
 						}
 				}
-				scope.apiMap.setHiddenMarker(markers); //set hidderMarkers to new list
+				scope.apiMap.setHiddenMarkers(markers); //set hidderMarkers to new list
 			}
 			scope.$watch('apiSearch.filteredMarkers', function (newValue, oldValue) {
 				if (newValue !== oldValue) {
@@ -62,7 +63,7 @@
 					for (i = 0; i < scope.gMarkers.length; i++) {
 						scope.gMarkers[i].setVisible(true); //set all markers to visible
 					}
-					scope.apiMap.setHiddenMarker(scope.gMarkers); //hidden markers will all be visible
+					scope.apiMap.setHiddenMarkers(scope.gMarkers); //hidden markers will all be visible
 					//zoomToMarkers(markers);
 				} else {
 					for (i = 0; i < scope.gMarkers.length; i++) {
@@ -77,7 +78,7 @@
 							}
 						}						
 					}					
-					scope.apiMap.setHiddenMarker(scope.gMarkers); //pass gMarkers to set which markers are hidden
+					scope.apiMap.setHiddenMarkers(scope.gMarkers); //pass gMarkers to set which markers are hidden
 					zoomToMarkers(arrSearchMarkersTmp);
 				}
 			} //markersSearchResult END

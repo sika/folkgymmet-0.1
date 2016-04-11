@@ -23,9 +23,6 @@ myApp.controller('appController', function ($scope) {
 myApp.factory('googleFactory', function () {
 	var factoryMap = {};
 
-	var googleMarkers = [];
-	var hiddenMarkers = [];
-
 	factoryMap.mapOptions = {
 		//karta över sverige
 		center : {
@@ -33,38 +30,18 @@ myApp.factory('googleFactory', function () {
 			lng : 19.7477994
 		},
 		zoom : 5,
-	};
+	}
 	factoryMap.setMapOptions = function(bounds, zoom){ //re-set mapOptions upon searching events (markers)
 		this.mapOptions.center.lat = bounds.getCenter().lat();
 		this.mapOptions.center.lng = bounds.getCenter().lng();
 		this.mapOptions.zoom = zoom;		
 	}
-	factoryMap.getGoogleMarkers = function () {
-		return googleMarkers;
-	}
-	factoryMap.removeMarkers = function () {
-		googleMarkers = [];
-	}
-	factoryMap.getHiddenMarkers = function () {
-		return hiddenMarkers;
-	}
-	factoryMap.setHiddenMarker = function (arrGoogleMarkers) {
-		hiddenMarkers = arrGoogleMarkers;
+  	factoryMap.hiddenMarkers = null;
+	factoryMap.setHiddenMarkers = function (arrGoogleMarkers) {
+	    this.hiddenMarkers = arrGoogleMarkers;
 	}
 
-	/*
-	factoryMap.setZoom = function(objBounds){
-		googleBounds = objBounds;
-	}
-	*/
 	return factoryMap;
-
-	/*
-	factoryMap.setGoogleMarker = function (objGoogleMarker) {
-	googleMarkers.push(objGoogleMarker);
-	}
-	 */
-
 })
 /*factory declaration*/
 myApp.factory('appFactory', function () {
