@@ -15,39 +15,11 @@ myApp.config(function ($stateProvider, $urlRouterProvider) {
 		templateUrl : 'app/components/partials/discussion/discussion.html'
 	})
 });
-myApp.controller('appController', function ($scope) {
-	console.log("appController:");
-	console.log($scope.$id);
-	//$scope.markersEvent = appFactory.getInitMarkers(); //get marker objects from app.js factory
-})
-myApp.factory('googleFactory', function () {
-	var factoryMap = {};
-
-	factoryMap.mapOptions = {
-		//karta över sverige
-		center : {
-			lat : 62.5421031,
-			lng : 19.7477994
-		},
-		zoom : 5,
-	}
-	factoryMap.setMapOptions = function(bounds, zoom){ //re-set mapOptions upon searching events (markers)
-		this.mapOptions.center.lat = bounds.getCenter().lat();
-		this.mapOptions.center.lng = bounds.getCenter().lng();
-		this.mapOptions.zoom = zoom;		
-	}
-  	factoryMap.hiddenMarkers = null;
-	factoryMap.setHiddenMarkers = function (arrGoogleMarkers) {
-	    this.hiddenMarkers = arrGoogleMarkers;
-	}
-
-	return factoryMap;
-})
+myApp.controller('appController', function ($scope) {})
 /*factory declaration*/
 myApp.factory('appFactory', function () {
-	/*empty object declaration*/
-	var factory = {};
-	var eventsAll = [{
+	return{
+		eventsAll: [{
 			id : 1,
 			label : "göteborg yeah",
 			city : 'Göteborg',
@@ -68,24 +40,35 @@ myApp.factory('appFactory', function () {
 			desc : 'This is Kiruna',
 			lat : 67.858475,
 			lang : 20.225530
+		}],
+		visibleMarkers: null,
+		setVisibleMarkers: function(arrGoogleMarkers){
+			this.visibleMarkers = arrGoogleMarkers;
 		}
-	];
-
-	var visibleMarkers = eventsAll; //initate visible markers will all markers/events
-
-
-	factory.getEventsAll = function () {
-		//console.log(markersEvent);
-		return eventsAll;
-	};
-
-	factory.getVisibleMarkers = function () {
-		return visibleMarkers;
 	}
-	factory.setVisibleMarkers = function (arrMarker) {
-		visibleMarkers = arrMarker;
-	}
-
-	return factory;
-
 }); //appFactory END
+
+
+	/*
+	var factoryMap = {};
+
+	factoryMap.mapOptions = {
+	//karta över sverige
+	center : {
+	lat : 62.5421031,
+	lng : 19.7477994
+	},
+	zoom : 5,
+	}
+	factoryMap.setMapOptions = function(bounds, zoom){ //re-set mapOptions upon searching events (markers)
+	this.mapOptions.center.lat = bounds.getCenter().lat();
+	this.mapOptions.center.lng = bounds.getCenter().lng();
+	this.mapOptions.zoom = zoom;
+	}
+	factoryMap.hiddenMarkers = null;
+	factoryMap.setHiddenMarkers = function (arrGoogleMarkers) {
+	this.hiddenMarkers = arrGoogleMarkers;
+	}
+
+	return factoryMap;
+	 */

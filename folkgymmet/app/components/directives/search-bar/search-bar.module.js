@@ -2,15 +2,14 @@ angular.module('search-bar.module', [])
 .factory('searchFactory', function () {
 	return {
 		filteredMarkers: [{}],
-        setSearchedMarkers: function(arrMarkers) {
-			this.filteredMarkers = arrMarkers; //set new array for markers to filter (see google-map watch)
-			//console.log(this);
+        setSearchedMarkers: function(arrSearchMarkers) {
+			this.filteredMarkers = arrSearchMarkers; //set new array for markers to filter (see google-map watch)
         }		
 	}
 })
 .controller('search-bar.controller', function ($scope, appFactory, searchFactory){
-			$scope.api = searchFactory;
-			$scope.eventsAll = appFactory.getEventsAll();
+			$scope.apiSearch = searchFactory;
+			$scope.eventsAll = appFactory.eventsAll;
 		    $scope.hits = null;
 			$scope.searchedMarkers = [];
 })
@@ -61,8 +60,8 @@ angular.module('search-bar.module', [])
 					}
 				};				
 			}
-			function setSearchedMarkers(arrMarkers){
-				searchFactory.setSearchedMarkers(arrMarkers); //pass array to searchFactory
+			function setSearchedMarkers(arrSearchMarkers){
+				scope.apiSearch.setSearchedMarkers(arrSearchMarkers); //pass array to searchFactory
 			}
 			
 		}//Link END

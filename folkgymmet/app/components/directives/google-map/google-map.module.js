@@ -4,10 +4,31 @@
 	$scope.apiApp = appFactory;
 	$scope.apiSearch = searchFactory;
 	$scope.mapOptions = $scope.apiMap.mapOptions;
-	$scope.events = $scope.apiApp.getEventsAll(); //events to base new markers on (long/lat)
+	$scope.events = $scope.apiApp.eventsAll; //events to base new markers on (long/lat)
 	$scope.gMarkers = []; //google markers array
 	//$scope.bounds = $scope.apiMap.getBounds();
 })
+.factory('googleFactory', function () {
+	return {
+		mapOptions : {
+			//karta över sverige
+			center : {
+				lat : 62.5421031,
+				lng : 19.7477994
+			},
+			zoom : 5,
+		},
+		setMapOptions : function (bounds, zoom) {//re-set mapOptions upon searching events (markers)
+			this.mapOptions.center.lat = bounds.getCenter().lat();
+			this.mapOptions.center.lng = bounds.getCenter().lng();
+			this.mapOptions.zoom = zoom;
+		},
+		hiddenMarkers : null,
+		setHiddenMarkers : function (arrGoogleMarkers) {
+			this.hiddenMarkers = arrGoogleMarkers;
+		}
+	}
+})//googleFactory END
 .directive('dGoogleMap', function () {
 	return {
 		restrict : 'E',
@@ -64,7 +85,7 @@
 						scope.gMarkers[i].setVisible(true); //set all markers to visible
 					}
 					scope.apiMap.setHiddenMarkers(scope.gMarkers); //hidden markers will all be visible
-					//zoomToMarkers(markers);
+					zoomToMarkers(scope.gMarkers);
 				} else {
 					for (i = 0; i < scope.gMarkers.length; i++) {
 						scope.gMarkers[i].setVisible(false); //hide all markers before
