@@ -1,4 +1,4 @@
-var myApp = angular.module('app', ['ui.router', 'eventJoin.module', 'eventCreate.module', 'header-menu.module',
+var myApp = angular.module('app', ['ui.router', 'event-join.module', 'event-create.module', 'header-menu.module',
 			'header-login.module', 'event-type-choose.module', 'sidebar-event-list.module', 'search-bar.module', 'google-map.module']);
 myApp.config(function ($stateProvider, $urlRouterProvider) {
 	$urlRouterProvider.otherwise('/');
@@ -6,10 +6,11 @@ myApp.config(function ($stateProvider, $urlRouterProvider) {
 	$stateProvider.state('eventJoin', {
 		url : '/',
 		controller : 'eventJoinController',
-		templateUrl : 'app/components/partials/eventJoin/eventJoin.html'
+		templateUrl : 'app/components/partials/event-join/event-join.html'
 	}).state('eventCreate', {
+		controller: 'eventCreateController',
 		url : '/eventCreate',
-		templateUrl : 'app/components/partials/eventCreate/eventCreate.html'
+		templateUrl : 'app/components/partials/event-create/event-create.html'
 	}).state('discussion', {
 		url : '/discussion',
 		templateUrl : 'app/components/partials/discussion/discussion.html'
@@ -41,34 +42,14 @@ myApp.factory('appFactory', function () {
 			lat : 67.858475,
 			lang : 20.225530
 		}],
-		visibleMarkers: null,
-		setVisibleMarkers: function(arrGoogleMarkers){
-			this.visibleMarkers = arrGoogleMarkers;
-		}
+		categories: [
+		'Bollsport',
+		'Cykel',
+		'Lugna gatan',
+		'Löpning',
+		'Mix',
+		'Styrketräning',
+		'Övrigt'
+		]
 	}
 }); //appFactory END
-
-
-	/*
-	var factoryMap = {};
-
-	factoryMap.mapOptions = {
-	//karta över sverige
-	center : {
-	lat : 62.5421031,
-	lng : 19.7477994
-	},
-	zoom : 5,
-	}
-	factoryMap.setMapOptions = function(bounds, zoom){ //re-set mapOptions upon searching events (markers)
-	this.mapOptions.center.lat = bounds.getCenter().lat();
-	this.mapOptions.center.lng = bounds.getCenter().lng();
-	this.mapOptions.zoom = zoom;
-	}
-	factoryMap.hiddenMarkers = null;
-	factoryMap.setHiddenMarkers = function (arrGoogleMarkers) {
-	this.hiddenMarkers = arrGoogleMarkers;
-	}
-
-	return factoryMap;
-	 */

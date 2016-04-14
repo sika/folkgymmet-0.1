@@ -1,4 +1,4 @@
-angular.module('eventJoin.module', [])
+angular.module('event-join.module', [])
 //controller start
 .controller('eventJoinController', function ($scope) {
     //$scope.markersEvent = appFactory.getInitMarkers(); //get marker objects from app.js factory

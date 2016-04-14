@@ -18,7 +18,7 @@
 			},
 			zoom : 5,
 		},
-		setMapOptions : function (bounds, zoom) {//re-set mapOptions upon searching events (markers)
+		setMapOptions : function (bounds, zoom) { //re-set mapOptions upon searching events (markers)
 			this.mapOptions.center.lat = bounds.getCenter().lat();
 			this.mapOptions.center.lng = bounds.getCenter().lng();
 			this.mapOptions.zoom = zoom;
@@ -26,9 +26,13 @@
 		hiddenMarkers : null,
 		setHiddenMarkers : function (arrGoogleMarkers) {
 			this.hiddenMarkers = arrGoogleMarkers;
+		},
+		visibleMarkers : null,
+		setVisibleMarkers : function (arrGoogleMarkers) {
+			this.visibleMarkers = arrGoogleMarkers;
 		}
 	}
-})//googleFactory END
+}) //googleFactory END
 .directive('dGoogleMap', function () {
 	return {
 		restrict : 'E',
@@ -44,8 +48,8 @@
 					createMarkers(scope.events[i]); //(re-)create new markers
 				}
 				scope.hiddenMarkers = scope.apiMap.hiddenMarkers;
-				if (scope.hiddenMarkers != null){
-				    hideMarkers(scope.gMarkers, scope.hiddenMarkers); //hide gMarkers if earlier set to hidden
+				if (scope.hiddenMarkers != null) {
+					hideMarkers(scope.gMarkers, scope.hiddenMarkers); //hide gMarkers if earlier set to hidden
 				}
 			});
 			function createMap() {
@@ -62,8 +66,8 @@
 				scope.gMarkers.push(marker);
 			}
 			function hideMarkers(markers, hiddenMarkers) { //hide markers
-			//console.log(hiddenMarkers)			
-			var visible;
+				//console.log(hiddenMarkers)
+				var visible;
 				for (i = 0; i < markers.length; i++) {
 					for (j = 0; j < hiddenMarkers.length; j++)
 						if (markers[i].id == hiddenMarkers[j].id) {
@@ -97,8 +101,8 @@
 								arrSearchMarkersTmp.push(scope.gMarkers[i]); //gMarkers where visible is true
 								break;
 							}
-						}						
-					}					
+						}
+					}
 					scope.apiMap.setHiddenMarkers(scope.gMarkers); //pass gMarkers to set which markers are hidden
 					zoomToMarkers(arrSearchMarkersTmp);
 				}
@@ -112,7 +116,7 @@
 				scope.map.fitBounds(bounds);
 				// set a minimum zoom
 				// if you got only 1 marker or all markers are on the same address map will be zoomed too much.
-				
+
 				if (scope.map.getZoom() > 15) {
 					scope.map.setZoom(15);
 				}
