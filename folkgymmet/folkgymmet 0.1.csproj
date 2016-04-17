@@ -48,6 +48,15 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -57,6 +66,14 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -67,6 +84,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="#extras\balsamiq\index.png" />
+    <Content Include="#extras\database\folkgymmet_01.png" />
+    <Content Include="#extras\database\folkgymmet_01.xml" />
     <Content Include="#extras\images\bgd_forrest.jpg" />
     <Content Include="app\app.js" />
     <Content Include="app\components\directives\event-type-choose\event-type-choose.css" />
@@ -75,7 +94,6 @@
     <Content Include="app\components\directives\google-map\google-map.module.js" />
     <Content Include="app\components\directives\header-login\header-login.css" />
     <Content Include="app\components\directives\header-login\header-login.html" />
-    <Content Include="app\components\directives\header-login\header-login.js" />
     <Content Include="app\components\directives\header-login\header-login.module.js" />
     <Content Include="app\components\directives\header-menu\header-menu.css" />
     <Content Include="app\components\directives\header-menu\header-menu.html" />
@@ -86,13 +104,12 @@
     <Content Include="app\components\directives\sidebar-event-list\sidebar-event-list.html" />
     <Content Include="app\components\directives\sidebar-event-list\sidebar-event-list.module.js" />
     <Content Include="app\components\partials\discussion\discussion.html" />
-    <Content Include="app\components\partials\eventCreate\eventCreate.html" />
-    <Content Include="app\components\partials\eventCreate\eventCreate.module.js" />
-    <Content Include="app\components\partials\eventJoin\eventJoin.css" />
-    <Content Include="app\components\partials\eventJoin\eventJoin.html" />
-    <Content Include="app\components\partials\eventJoin\eventJoin.module.js" />
-    <Content Include="app\components\partials\home\home.html" />
-    <Content Include="app\components\partials\home\home.module.js" />
+    <Content Include="app\components\partials\event-create\event-create.css" />
+    <Content Include="app\components\partials\event-create\event-create.html" />
+    <Content Include="app\components\partials\event-create\event-create.module.js" />
+    <Content Include="app\components\partials\event-join\event-join.css" />
+    <Content Include="app\components\partials\event-join\event-join.html" />
+    <Content Include="app\components\partials\event-join\event-join.module.js" />
     <Content Include="app\shared\script.js" />
     <Content Include="app\shared\stylesheet.css" />
     <Content Include="externals\angularjs\angular-animate.js" />
@@ -135,6 +152,8 @@
     <Content Include="#extras\Req spec.docx" />
     <Content Include="#extras\todo.docx" />
     <Content Include="app\components\directives\search-bar\search-bar.module.js" />
+    <Content Include="#extras\database spec.xlsx" />
+    <None Include="Properties\PublishProfiles\testamestabesta.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -143,7 +162,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Web.config" />
+    <Content Include="Properties\PublishProfiles\testamestabesta.pubxml.user" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html data-ng-app="app">
+<head>
+    <title>Folkgymmet 0.1</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8" />
+    <link rel="shortcut icon" href=""><!-- for removing favicon error -->     
+    <!-- script references -->
+	<script src="externals/angularjs/lodash.js"></script>
+    <script src="externals/angularjs/angular.js"></script>
+    <script src="externals/angularjs/angular-ui-router.js"></script>
+    <script src="externals/angularjs/angular-animate.js"></script>
+    <script src="externals/angularjs/angular-simple-logger/dist/angular-simple-logger.js"></script>
+    <script src="externals/angularjs/angular-google-maps.js"></script>
+	<script src="externals/jquery/jquery-1.12.1.js"></script>
+	<script src="externals/jquery/jquery-ui/jquery-ui.js"></script>
+	<script type="text/javascript">var $jq = $.noConflict();</script>
+	<script src="app/app.js"></script>
+    <script src="app/components/partials/event-join/event-join.module.js"></script>
+    <script src="app/components/partials/event-create/event-create.module.js"></script>
+    <script src="app/components/directives/header-menu/header-menu.module.js"></script>
+    <script src="app/components/directives/header-login/header-login.module.js"></script>
+    <script src="app/components/directives/event-type-choose/event-type-choose.module.js"></script> 
+    <script src="app/components/directives/sidebar-event-list/sidebar-event-list.module.js"></script>
+    <script src="app/components/directives/search-bar/search-bar.module.js"></script>
+    <script src="app/components/directives/google-map/google-map.module.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxVXxoZdVh3xxsRASsvUcJD1M9sieJzVE"></script>
+    <!--&callback=initMap--> 
+    <!-- CSS references -->
+    <link href="externals/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="externals/bootstrap/css/normalize.css" rel="stylesheet" />
+    <link href="externals/jquery/jquery-ui/jquery-ui.css" rel="stylesheet" />
+    <link href="app/shared/stylesheet.css" rel="stylesheet" />
+	<link href="app/components/partials/event-join/event-join.css" rel="stylesheet" />
+	<link href="app/components/partials/event-create/event-create.css" rel="stylesheet" />
+    <link href="app/components/directives/header-menu/header-menu.css" rel="stylesheet" />
+    <link href="app/components/directives/header-login/header-login.css" rel="stylesheet" />
+    <link href="app/components/directives/event-type-choose/event-type-choose.css" rel="stylesheet" />
+    <link href="app/components/directives/sidebar-event-list/sidebar-event-list.css" rel="stylesheet" />
+    <link href="app/components/directives/search-bar/search-bar.css" rel="stylesheet" />
+    
+</head>
+<body>
+    <div class="container_main">
+        <!-- directive: discussion -->
+        <div d-header-menu class="header-menu"></div>
+        <!-- directive: login -->
+		<div d-header-login class="header-login"></div>
+        <!-- directive: choose type --> 
+		<div class="block_main">
+			<div d-event-type-choose class="event-type-choose"></div>
+			<!-- Views  -->
+			<div data-ui-view class="ui-view_container"></div>
+		</div><!--
+		END Views  
+			
+			Removing white-space
+			
+		directive: dynamic event list 
+		--><div d-sidebar-event-list class="sidebar-event-list"></div>
+        <!-- directive: contact -->
+    </div>
+</body>
+</html>

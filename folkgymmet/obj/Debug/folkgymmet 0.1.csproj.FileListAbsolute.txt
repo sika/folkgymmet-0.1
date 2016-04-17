@@ -38,3 +38,11 @@ D:\Mina dokument\Visual Studio 2015\Projects\folkgymmet 0.1\folkgymmet\bin\Micro
 D:\Mina dokument\Visual Studio 2015\Projects\folkgymmet 0.1\folkgymmet\obj\Debug\folkgymmet 0.1.csprojResolveAssemblyReference.cache
 D:\Mina dokument\Visual Studio 2015\Projects\folkgymmet 0.1\folkgymmet\obj\Debug\folkgymmet 0.1.dll
 D:\Mina dokument\Visual Studio 2015\Projects\folkgymmet 0.1\folkgymmet\obj\Debug\folkgymmet 0.1.pdb
+d:\mina dokument\visual studio 2015\Projects\folkgymmet 0.1\folkgymmet\bin\Newtonsoft.Json.dll
+d:\mina dokument\visual studio 2015\Projects\folkgymmet 0.1\folkgymmet\bin\System.Net.Http.Formatting.dll
+d:\mina dokument\visual studio 2015\Projects\folkgymmet 0.1\folkgymmet\bin\System.Web.Http.dll
+d:\mina dokument\visual studio 2015\Projects\folkgymmet 0.1\folkgymmet\bin\System.Web.Http.WebHost.dll
+d:\mina dokument\visual studio 2015\Projects\folkgymmet 0.1\folkgymmet\bin\Newtonsoft.Json.xml
+d:\mina dokument\visual studio 2015\Projects\folkgymmet 0.1\folkgymmet\bin\System.Net.Http.Formatting.xml
+d:\mina dokument\visual studio 2015\Projects\folkgymmet 0.1\folkgymmet\bin\System.Web.Http.xml
+d:\mina dokument\visual studio 2015\Projects\folkgymmet 0.1\folkgymmet\bin\System.Web.Http.WebHost.xml

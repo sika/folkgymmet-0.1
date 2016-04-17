@@ -1,0 +1,28 @@
+d:\mina dokument\visual studio 2015\Projects\folkgymmet 0.1\folkgymmet\bin\roslyn\csc.exe
+d:\mina dokument\visual studio 2015\Projects\folkgymmet 0.1\folkgymmet\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+d:\mina dokument\visual studio 2015\Projects\folkgymmet 0.1\folkgymmet\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+d:\mina dokument\visual studio 2015\Projects\folkgymmet 0.1\folkgymmet\bin\roslyn\Microsoft.CodeAnalysis.dll
+d:\mina dokument\visual studio 2015\Projects\folkgymmet 0.1\folkgymmet\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+d:\mina dokument\visual studio 2015\Projects\folkgymmet 0.1\folkgymmet\bin\roslyn\Microsoft.CSharp.Core.targets
+d:\mina dokument\visual studio 2015\Projects\folkgymmet 0.1\folkgymmet\bin\roslyn\Microsoft.VisualBasic.Core.targets
+d:\mina dokument\visual studio 2015\Projects\folkgymmet 0.1\folkgymmet\bin\roslyn\System.Collections.Immutable.dll
+d:\mina dokument\visual studio 2015\Projects\folkgymmet 0.1\folkgymmet\bin\roslyn\System.Reflection.Metadata.dll
+d:\mina dokument\visual studio 2015\Projects\folkgymmet 0.1\folkgymmet\bin\roslyn\vbc.exe
+d:\mina dokument\visual studio 2015\Projects\folkgymmet 0.1\folkgymmet\bin\roslyn\VBCSCompiler.exe
+d:\mina dokument\visual studio 2015\Projects\folkgymmet 0.1\folkgymmet\bin\roslyn\VBCSCompiler.exe.config
+d:\mina dokument\visual studio 2015\Projects\folkgymmet 0.1\folkgymmet\bin\folkgymmet 0.1.dll.config
+d:\mina dokument\visual studio 2015\Projects\folkgymmet 0.1\folkgymmet\bin\folkgymmet 0.1.dll
+d:\mina dokument\visual studio 2015\Projects\folkgymmet 0.1\folkgymmet\bin\folkgymmet 0.1.pdb
+d:\mina dokument\visual studio 2015\Projects\folkgymmet 0.1\folkgymmet\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+d:\mina dokument\visual studio 2015\Projects\folkgymmet 0.1\folkgymmet\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+d:\mina dokument\visual studio 2015\Projects\folkgymmet 0.1\folkgymmet\obj\Release\folkgymmet 0.1.csprojResolveAssemblyReference.cache
+d:\mina dokument\visual studio 2015\Projects\folkgymmet 0.1\folkgymmet\obj\Release\folkgymmet 0.1.dll
+d:\mina dokument\visual studio 2015\Projects\folkgymmet 0.1\folkgymmet\obj\Release\folkgymmet 0.1.pdb
+d:\mina dokument\visual studio 2015\Projects\folkgymmet 0.1\folkgymmet\bin\Newtonsoft.Json.dll
+d:\mina dokument\visual studio 2015\Projects\folkgymmet 0.1\folkgymmet\bin\System.Net.Http.Formatting.dll
+d:\mina dokument\visual studio 2015\Projects\folkgymmet 0.1\folkgymmet\bin\System.Web.Http.dll
+d:\mina dokument\visual studio 2015\Projects\folkgymmet 0.1\folkgymmet\bin\System.Web.Http.WebHost.dll
+d:\mina dokument\visual studio 2015\Projects\folkgymmet 0.1\folkgymmet\bin\Newtonsoft.Json.xml
+d:\mina dokument\visual studio 2015\Projects\folkgymmet 0.1\folkgymmet\bin\System.Net.Http.Formatting.xml
+d:\mina dokument\visual studio 2015\Projects\folkgymmet 0.1\folkgymmet\bin\System.Web.Http.xml
+d:\mina dokument\visual studio 2015\Projects\folkgymmet 0.1\folkgymmet\bin\System.Web.Http.WebHost.xml

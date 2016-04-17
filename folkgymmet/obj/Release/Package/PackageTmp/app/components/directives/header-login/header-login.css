@@ -1,0 +1,21 @@
+﻿.header-login{
+    position:absolute;
+	width: 15%;
+	right: 0;
+    display: inline-block;	
+    /*outline: 1px solid black;*/
+    /*outline: 1px solid red;*/
+}
+.header-login button{
+	width: 100%;
+}
+.header-login input[type="text"]{
+	width: 100%;
+    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	height: 28px;
+}
+/* #div-login-form{
+	position: relative;
+} */
